@@ -2,3 +2,69 @@
 .These objects can interact with each other to perform specific tasks. 
 CLASS:
   A class is like a blueprint or a template that defines the characteristics and functions of an object
+OBJECT:
+ . Once we have defined the Robot class, we can create instances of the class, which are called objects.
+  .An object is like a specific instance of the blueprint or template. 
+
+
+
+
+                             class & object
+
+#include <iostream>
+using namespace std;
+#include <iostream>  
+using namespace std;  
+class Student {  
+   public:  
+      int id;//data member (also instance variable)      
+      string name;//data member(also instance variable)      
+};  
+int main() {  
+    Student s1; //creating an object of Student   
+    s1.id = 2770;    
+    s1.name ="Sivakrishnateja Tammisetty";   
+    cout<<s1.id<<endl;  
+    cout<<s1.name<<endl;  
+    return 0;  
+}
+
+
+
+
+
+
+
+
+
+
+//Accessing private variables outside of class using objects with the help of setter() and getter() methods
+#include <iostream>
+using namespace std;
+#include <iostream>  
+using namespace std;  
+class Student {  
+      int id;     
+      string name;//data member(also instance variable) 
+      public:
+      void setter(int i,string s)
+      {
+          id=i;
+          name=s;
+      }
+      string getter()
+      {
+          return name;
+      }
+      int getter_id()
+      {
+          return id;
+      }
+};  
+int main() {  
+    Student s1; //creating an object of Student   
+    s1.setter(2770,"Sivakrishnateja") ;
+    cout<<s1.getter()<<endl;
+    cout<<s1.getter_id()<<endl;
+    return 0;  
+} 
